@@ -1,0 +1,26 @@
+        <h2>New book</h2>
+        <%= form_with model:post_book, local:true do |f| %>
+          <% if post_book.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= post_book.errors.count %>件のエラーが発生しました。</h2>
+            <ul>
+              <% post_book.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field row">
+          <lavel for="book_title">Title</lavel>
+            <%= f.text_field :title, class:"form-control" %>
+        </div>
+        <div class="field row">
+          <label for="book_opinion">Opinion</label>
+            <%= f.text_area :opinion, class:"form-control" %>
+        </div>
+        <div class="actions row">
+          <%= f.submit "Create Book", class:"btn btn-primary col-xs-12" %>
+        </div>
+          <% end %>
+      </div>
+

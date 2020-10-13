@@ -20,7 +20,7 @@
             <% if user_signed_in? %>
               <li>
                 <%= link_to user_path(current_user.id) do %>
-                <i class="glyphicon glyphicon-home"></i> Home
+                <i class="glyphicon glyphicon-home"></i>  Home
                 <% end %>
               </li>
               <li>
@@ -40,7 +40,7 @@
               </li>
             <% else %>
               <li>
-                <%= link_to homes_top_path do %>
+                <%= link_to root_path do %>
                 <i class="glyphicon glyphicon-home"></i> Home
                 <% end %>
               </li>
@@ -64,6 +64,9 @@
         </nav>
       </div>
     </header>
+
+    <%= notice %>
+
     <%= yield %>
     <footer>
       <div class="container">

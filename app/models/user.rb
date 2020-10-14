@@ -10,11 +10,11 @@ class User < ApplicationRecord
   attachment :profile_image
 
   #登録時にメールアドレスを不要とする
-  def email_required?
-    false
-  end
+  # def email_required?
+  #   false
+  # end
 
-  def email_changed?
-    false
-  end
+  # def email_changed?
+  #   false
+  # end
 end

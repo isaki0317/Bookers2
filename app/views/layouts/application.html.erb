@@ -4,7 +4,7 @@
     <title>Bookers2</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/32c3e3eeaa.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -45,7 +45,7 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to homes_about_path do %>
+                <%= link_to home_about_path do %>
                 <i class="glyphicon glyphicon-link"></i> About
                 <% end %>
               </li>
@@ -65,9 +65,8 @@
       </div>
     </header>
 
-    <%= notice %>
+      <%= yield %>
 
-    <%= yield %>
     <footer>
       <div class="container">
         <div class="row">

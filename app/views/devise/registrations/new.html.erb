@@ -6,12 +6,12 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <lavel for="user_name">Name</lavel><br />
+      <label for="user_name">Name</label><br />
       <%= f.text_field :name %>
     </div>
 
     <div class="field">
-      <lavel for"user_email">Email</lavel><br />
+      <label for"user_email">Email</label><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
@@ -24,7 +24,7 @@
     </div>
 
     <div class="field">
-      <lavel for="password_confirmation">Password confirmation</lavel><br />
+      <label for="password_confirmation">Password confirmation</label><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 

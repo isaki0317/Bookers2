@@ -1,5 +1,10 @@
 <div class="body">
   <div class="container">
+      <% if flash[:notice] %>
+        <div class="flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
     <div class="row">
 
       <div class="col-xs-3">
@@ -24,7 +29,7 @@
           <i class="glyphicon glyphicon-wrench col-xs-12 btn btn-default"></i>
           <% end %>
         <% else %>
-          <%= link_to user_path(@user) do %>
+          <%= link_to user_path(current_user.id) do %>
           <i class="glyphicon glyphicon-wrench col-xs-12 btn btn-default"></i>
           <% end %>
         <% end %>
@@ -52,7 +57,7 @@
                 <% end %>
                 </td>
                 <td><%= link_to book.title, book_path(book.id) %></td>
-                <td><%= book.opinion %></td>
+                <td><%= book.body %></td>
               </tr>
               <% end %>
             <% else %>
@@ -64,7 +69,7 @@
                 <% end %>
                 </td>
                 <td><%= link_to book.title, book_path(book.id) %></td>
-                <td><%= book.opinion %></td>
+                <td><%= book.body %></td>
               </tr>
               <% end %>
             <% end %>

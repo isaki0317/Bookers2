@@ -3,8 +3,10 @@
     <h2>Log in</h2>
 
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
     <div class="field">
-      <lavel for="user_name">Name</lavel><br />
+      <label for="user_name">Name</label><br />
       <%= f.text_field :name %>
     </div>
 
